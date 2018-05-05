@@ -1,0 +1,151 @@
+<html>
+	<head>
+		<title>
+			Khareed lo - Sign up
+		</title>
+		<style>
+		.login {
+float: left;
+margin: 20px;
+padding:100px;
+width: 300px;
+height: 300px;
+border: 1px solid black;
+color:white;
+} 
+
+
+        .style1 {color: #000000}
+        .style2 {float: left; margin: 20px; padding: 100px; width: 300px; height: 300px; border: 1px solid black; color: #000000; }
+		
+		
+
+		
+        </style>
+		
+		
+		<script language="JavaScript" type="text/JavaScript">
+		
+		
+		function validLogin()
+		{
+			if(document.getElementById('username').value == "")
+			{alert("Username is empty");
+				return false;}
+				
+			if(document.getElementById('password').value == "")
+			{alert("Password cannot be empty");
+			return false;}
+		}
+		
+		function validate()
+		{
+		
+		if(document.getElementById('usname').value == "")
+			{alert("Username is empty");
+				return false;}
+		
+		if(document.getElementById('psw').value == "")
+		{alert("Password cannot be empty");
+		return false;}
+		
+		if(document.getElementById('mail').value == "")
+		{alert("Enter email address");
+		return false;}
+		
+		if (!document.customer.r1[0].checked && !document.customer.r1[1].checked)
+		{
+		alert("Please choose gender");
+		return false;
+		}
+		
+		if(document.getElementById('fname').value == "")
+			{alert("Enter first name");
+				return false;}
+		
+		if(document.getElementById('lname').value == "")
+			{alert("Enter last name");
+				return false;}
+				
+		if(!document.getElementById('cb').checked)
+		{
+			alert("Please accept terms and condition");
+			return false;
+		}
+		
+		
+		
+		}
+		
+		</script>
+		
+		
+		
+	</head>
+	
+	<body background="colorful-shopping-bags.jpg" style=background-size:100%>
+	<a href="index.html" target="_self"><img src="Untitled.png" width="218" height="136" /></a><h1 id="h">Online Shopping In Pakistan</h1>
+	<h3> Experience the lifestyle</h3>
+	<form name=customer id="customer" method='get' action='Register.jsp' enctype="multipart/form-data"  onSubmit="return validate()">
+		<div id="section">
+	<div class="login">
+	<strong><span style="color: #000000"><a style="font-size:140%"> I am a new customer </a> </span></strong>
+	<span class="style1"><br>
+	<br>
+	First Name:<br>
+	  <input type=text id="fname" name='fname'/>
+	  <br>
+	  Last Name:<br>
+	  <input type=text id="lname" name='lname'/>
+	  <br>
+	Username:<br>
+	<input type=text name=username id="usname" />
+	<br>
+	Password:<br>
+	<input type=password name=password id="psw"/>
+	<br>
+	Email:<br>
+	<input type=email name=email id="mail"/>
+	<br>
+	
+	  
+	  Gender:<br>
+	<input type=radio name=r1 value=Male />
+	Male
+	  <input type=radio name=r1 value=Female />
+	  Female
+	  <br>
+	  
+	  Date Of Birth:<br>
+	  <input type=date name=dob />
+	  <br>
+	  <input type=checkbox id="cb" name='cb' />
+	  I have read the terms and conditions.<br>
+	  <br>
+	  </span>
+	<input type='submit' value='Sign up'/> 
+	</div>
+	</form>
+	<div class="style2">
+	<form name=log id="log" method='get' action='secondServlet'  enctype="multipart/form-data"  onSubmit="return validLogin()">
+	<strong><a style="font-size:140%"> I already have an account here </a> </strong>
+	<br><br><br><br><br><strong>Username:</strong><input type="text" id="username" name=username />
+	<br><br><strong>Password:</strong><input type="password" id="password" name=password />
+	<br><span style="padding-right:150px"></span><a href="www.google.com" target="_self">Forgot Password?</a>
+	<br><br><span style="padding-right:200px"></span><input type='submit' value='Login'/>
+
+<p>
+                &copy; 2015 Khareed Lo. All Rights Reserved. Designed by <a href="https://www.facebook.com/ahsan.mughal.7771"
+                    target="_blank" title="Khareed lo.pk">B & M Developers)</a></p>
+
+
+	</div>
+
+	</div>
+
+
+	</form>
+	
+
+	</body>
+</html>
